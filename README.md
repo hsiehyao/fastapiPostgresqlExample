@@ -11,6 +11,7 @@ cd fastapi_postgresql_example
 pip install --upgrade pip (optional)
 gh repo clone hsiehyao/fastapiPostgresqlExample
 pip install -r requirements.txt
+cp .env.example .env
 ```
 
 ## common alembic command
