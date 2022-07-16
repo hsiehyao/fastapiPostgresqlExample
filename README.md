@@ -9,7 +9,7 @@ python3 -m venv fastapi_postgresql_example
 cd fastapi_postgresql_example
 . bin/activate
 pip install --upgrade pip (optional)
-git clone <repo> <directory>
+gh repo clone hsiehyao/fastapiPostgresqlExample
 pip install -r requirements.txt
 ```
 
