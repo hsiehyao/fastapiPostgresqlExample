@@ -16,14 +16,9 @@ cp .env.example .env
 
 ## common alembic command
 ```console
-# for the first time
 alembic init migration
 alembic revision --autogenerate -m "Initial"
-
-# or
 alembic revision --autogenerate -m "drop books table"
-
-# don't forget to update
 alembic upgrade head
 ```
 ## common postgresql command
@@ -54,10 +49,10 @@ SECRET_KEY=abc123
 DATABASE_URL = f"postgresql://{config('DB_USER')}:{config('DB_PASSWORD')}@localhost:5432/complaints"
 
 # alembic.ini
-sqlalchemy.url = postgresql://newuser:password@localhost:5432/clothes
+sqlalchemy.url = postgresql://%(DB_USER)s:%(DB_PASS)s@localhost:5432/complaints
 
 # main.py
-Debug Mode:
+# Debug Mode:
 if __name__ == "__main__":
     uvicorn.run("__main__:app", host="0.0.0.0", port=8000, reload=True)
 ```
