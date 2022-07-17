@@ -56,3 +56,9 @@ sqlalchemy.url = postgresql://%(DB_USER)s:%(DB_PASS)s@localhost:5432/complaints
 if __name__ == "__main__":
     uvicorn.run("__main__:app", host="0.0.0.0", port=8000, reload=True)
 ```
+
+## create super user
+```console
+export PYTHONPATH=./
+python commands/create_super_user.py -f Test -l Admin -e admin@admin.com -p 123 -i GB29 -pa 123
+```
